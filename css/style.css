@@ -1,0 +1,9 @@
+.business-card {
+    font-family: 'Cuprum', sans-serif, Arial;
+    text-align: center;
+}
+
+.business-card__place:before {
+    content: '\26C4';
+    padding: 0 5px 0 0;
+}
