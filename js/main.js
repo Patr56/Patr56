@@ -1,43 +1,22 @@
-(function() {
-    var currentMonth = new Date().getMonth();
-    var placeForSeasonEl = document.getElementById("place");
-
+(function(idElement, classPrefix) {
     var season;
-    switch (currentMonth) {
-        // winter
-        case 11:
-        case 0:
-        case 1:
-            season = "winter";
-            break;
+    var currentMonth = new Date().getMonth();
+    var placeForSeasonEl = document.getElementById(idElement);
 
-        // spring
-        case 2:
-        case 3:
-        case 4:
-            season = "spring";
-            break;
-
-        // summer
-        case 5:
-        case 6:
-        case 7:
-            season = "summer";
-            break;
-
-        // autumn
-        case 8:
-        case 9:
-        case 10:
-            season = "autumn";
-            break;
-        default:
-            season = null;
-            break;
+    if ([0, 1, 11].indexOf(currentMonth)) {
+        season = "winter";
+    } else if ([2, 3, 4].indexOf(currentMonth)) {
+        season = "spring";
+    } else if ([5, 6, 7].indexOf(currentMonth)) {
+        season = "summer";
+    } else if ([8, 9, 10].indexOf(currentMonth)) {
+        season = "autumn";
+    } else {
+        season = null;
     }
 
     if (season) {
-        placeForSeasonEl.className += " business-card__place_" + season;
+        placeForSeasonEl.className += " " + classPrefix + season;
     }
 
-})();
+})("place", "business-card__place_");
