@@ -37,7 +37,7 @@
     }
 
     if (season) {
-        placeForSeasonEl.className += "business-card__place_" + season;
+        placeForSeasonEl.className += " business-card__place_" + season;
     }
 
 })();
