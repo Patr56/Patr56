@@ -4,6 +4,21 @@
 }
 
 .business-card__place:before {
-    content: '\26C4';
     padding: 0 5px 0 0;
+}
+
+.business-card__place_winter:before {
+    content: '⛄';
+}
+
+.business-card__place_spring:before {
+    content: '💐️';
+}
+
+.business-card__place_summer:before {
+    content: '☀️';
+}
+
+.business-card__place_autumn:before {
+    content: '🍂';
 }
